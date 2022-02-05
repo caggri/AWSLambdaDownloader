@@ -1,5 +1,6 @@
 # AWS Lambda Downloader
 The script downloads all lambda functions and extracts them to separate folders. 
+
 Prerequisites: 
 * The AWS configuration must be done. 
 - The jq tool must be installed
