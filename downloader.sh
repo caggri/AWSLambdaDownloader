@@ -1,9 +1,9 @@
 #!/bin/bash
 if [ $# -gt 0 ] 
-  then
-    region="--region $1"
-  else
-    region="--region $(aws configure get region)"
+then
+	region="--region $1"
+else
+	region="--region $(aws configure get region)"
 fi
 
 for i in $(aws lambda list-functions $region --output json | jq '.Functions[].FunctionName' | sed 's/"//g')
